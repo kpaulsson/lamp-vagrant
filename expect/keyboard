@@ -1,0 +1,78 @@
+#!/usr/bin/expect -f
+#
+#--------------------------------------------------+
+#                                                  |
+#    Author: Kristoffer Paulsson                   |
+#    Email: kristoffer.paulsson@gmail.com          |
+#    Copyright: (c) 2015 Kristoffer Paulsson       |
+#    License: MIT                                  |
+#                                                  |
+#--------------------------------------------------+
+#
+
+
+set timeout -1
+spawn sudo dpkg-reconfigure keyboard-configuration -freadline
+match_max 100000
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "Keyboard model:"
+sleep .3
+send -- "69\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "\[More\]"
+sleep .3
+send -- "\r"
+
+expect "Country of origin for the keyboard:"
+sleep .3
+send -- "81\r"
+
+expect "Keyboard layout:"
+sleep .3
+send -- "1\r"
+
+expect "Key to function as AltGr:"
+sleep .3
+send -- "1\r"
+
+expect "Compose key:"
+sleep .3
+send -- "1\r"
+
+expect eof

@@ -1,0 +1,30 @@
+#!/usr/bin/expect -f
+#
+#--------------------------------------------------+
+#                                                  |
+#    Author: Kristoffer Paulsson                   |
+#    Email: kristoffer.paulsson@gmail.com          |
+#    Copyright: (c) 2015 Kristoffer Paulsson       |
+#    License: MIT                                  |
+#                                                  |
+#--------------------------------------------------+
+#
+
+
+set timeout -1
+spawn sudo apt-get install phpmyadmin
+match_max 100000
+
+expect "Do you want to continue?"
+sleep .3
+send -- "\r"
+
+expect "Web server to reconfigure automatically:"
+sleep .3
+send -- " \r"
+
+expect "Configure database for phpmyadmin with dbconfig-common?"
+sleep .3
+send -- "\[C\r"
+
+expect eof
