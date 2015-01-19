@@ -16,7 +16,7 @@ Installation
 
 You need Git and Vagrant installed on your computer.
 
-1. First you clone this repo with your Git.
+1. First you clone this repo with your Git
 
 	An alternative is to copy the visible files to another location if you are going
 	to create a git repository for your project.
