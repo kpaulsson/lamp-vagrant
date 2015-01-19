@@ -38,7 +38,10 @@ Tips
 ssh vagrant@localhost -p 2222
 ```
 
- - If you have an international keyboard like me you can change the keyboard layout by doing: sudo dpkg-reconfigure keyboard-configuration
+ - If you have an international keyboard like me you can change the keyboard layout by doing: 
+```bash
+sudo dpkg-reconfigure keyboard-configuration
+```
 
  - You will find phpMyAdmin at: http://localhost:8080/phpmyadmin
 
