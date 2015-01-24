@@ -7,9 +7,8 @@ Provisioned tools:
 
 * Git
 * Full LAMP-stack
-* All (nearly) PHP extensions
+* All (almost) PHP extensions
 * phpMyAdmin
-* Composer
 
 
 Installation

@@ -9,6 +9,8 @@
 #                                                  |
 #--------------------------------------------------+
 
+sudo apt-get update && apt-get upgrade
+
 sudo apt-get install expect -y
 
 ## Install git
@@ -34,7 +36,7 @@ expect eof
 EOD
 
 ### Install extra PHP modules
-sudo apt-get install php5-curl php5-gmp php5-ldap php5-odbc php5-pgsql php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl php5-cli php5-gd php5-json php5-mcrypt php5-mysql php5-readline pkg-php-tools -y
+sudo apt-get install php5-curl php5-gmp php5-ldap php5-odbc php5-pgsql php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl php5-cli php5-gd php5-json php5-mcrypt php5-mysql php5-readline -y
 sudo service apache2 restart
 
 ## Install phpMyAdmin
@@ -59,7 +61,3 @@ send -- "\[C\r"
 expect eof
 EOD
 
-## Install PHP composer globally
-
-curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
